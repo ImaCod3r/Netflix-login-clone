@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #e50914;
+  --red-hover: #c11119;
+  --white: #fff;
+  --black: #000000b3;
+  --full-black: #000000;
+  --gray: rgba(128, 128, 128, 0.4);
+  --gray-hover: rgba(128, 128, 128, 0.3);
+}
+
+body {
+  background-image: url("../img/background.jpg");
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body * a:hover {
+  text-decoration: underline;
+}
+
+header {
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 100px;
+}
+
+.logo a img {
+  width: 180px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrapper {
+  width: 450px;
+  min-height: 741px;
+
+  border-radius: 5px 5px 0px 0px;
+
+  padding: 48px 68px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.form-wrapper h1 {
+  margin-bottom: 28px;
+}
+
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+form input,
+form button {
+  width: 100%;
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: 16px;
+}
+
+form input {
+  padding: 20px 16px;
+  border: 1px solid var(--gray);
+  background-color: var(--black);
+}
+
+form button {
+  padding: 12px;
+  border: none;
+
+  color: var(--white);
+
+  background-color: var(--gray);
+}
+
+button[type="submit"] {
+  background-color: #e50914;
+}
+
+form a {
+  color: var(--white);
+
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.actions {
+  margin-top: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actions p.redirect {
+  color: var(--white);
+}
+
+p.redirect a {
+  color: var(--white);
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p.redirect a:hover{
+  text-decoration: underline;
+}
+
+.actions p {
+  color: var(--gray);
+}
+
+/* FOOTER */
+footer{
+  width: 100%;
+  min-height: 310px;
+  margin-top: -10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  background: var(--full-black);
+}
+
+footer a{
+  display: inline-block;
+  flex: 1;
+  color: var(--gray);
+
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+footer .footer-wrapper .items{
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.items select{
+  border: 1px solid --gray;
+  border-radius: 2px;
+  padding: 8px;
+
+  background-color: var(--full-black);
+  color: var(--white);
+}
