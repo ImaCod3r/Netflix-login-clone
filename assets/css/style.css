@@ -15,7 +15,7 @@
 }
 
 body {
-  background-image: url("../img/background.jpg");
+  background: url("../img/background.jpg");
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
@@ -84,6 +84,13 @@ form input {
   padding: 20px 16px;
   border: 1px solid var(--gray);
   background-color: var(--black);
+
+  font-weight: 400;
+  color: var(--white);
+}
+
+form input:focus{
+  outline: 2px solid var(--white);
 }
 
 form button {
@@ -130,8 +137,10 @@ p.redirect a:hover{
 }
 
 .actions p {
-  color: var(--gray);
+  font-size: 14px;
+  color: #b0b0b0;
 }
+
 
 /* FOOTER */
 footer{
@@ -139,10 +148,7 @@ footer{
   min-height: 310px;
   margin-top: -10px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 40px 20px;
 
 
   background: var(--full-black);
@@ -151,18 +157,16 @@ footer{
 footer a{
   display: inline-block;
   flex: 1;
-  color: var(--gray);
+  color: #b0b0b0;
 
-  font-weight: 600;
   font-size: 16px;
-  text-decoration: none;
 }
 
 footer .footer-wrapper .items{
   margin-top: 20px;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
@@ -173,4 +177,33 @@ footer .footer-wrapper .items{
 
   background-color: var(--full-black);
   color: var(--white);
+
+  outline: 2px solid var(--white);
+}
+
+@media screen and (max-width: 650px){
+  body{
+    background: #000000;
+  }
+
+  header{
+    height: 90px;
+  }
+
+  .logo{
+    margin-left: 40px;
+  }
+
+  .logo a img{
+    width: 90px;
+  }
+
+  .form-wrapper{
+    height: 600px;
+    padding: 10px;
+  }
+
+  footer{
+    border-top: 1px solid #b0b0b0;
+  }
 }
